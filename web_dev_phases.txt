@@ -1,0 +1,36 @@
+Web Design & Development Process
+
+Phase 1: Analysis
+	Website Purpose:					Provide an interface for our SMS gateway service
+	Website Goals:						Allow multiple people to send SMS using one number
+	Target Audience:					Small Businesses & Emergency lines/services
+
+Phase 2: Plannning
+	Sitemap:							No time atm
+	Website Structure:					One main homepage (so far)
+	Technologies Used:					NodeJS, HTML, CSS, etc
+
+Phase 3: Design
+	Wireframe Models:					Undecided, basic assumed
+	Visual Style:						Minimalistic
+	Usability, UI, UX:					For web browsers (Windows & Mac)
+
+Phase 4: Content
+	Copywriting:						Not applicable
+	Photos & Videos:					Megaphone icon
+	Search Engine Optimisation (SEO):	Nope, not feasible atm
+
+Phase 5: Development
+	HTML & CSS Coding:					Main index page
+	Databases:							MongoDB
+	Responsive Design:					If time allows
+
+Phase 6: Testing
+	Technical Testing:					If time allows
+	Browser Compatibility:				Almost all browsers
+	"Does it fulfill its purpose":		It should (hopefully)
+
+Phase 7: Deployment
+	Monitoring:							Future Extension
+	Bug Fixes:							Future Extension
+	Maintenance:						Future Extension

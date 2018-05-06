@@ -1,0 +1,32 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #F1F1F1;
+}
+
+.sent {
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#00B7FF;
+    color:#FFFFFF;
+    margin-bottom: 13px;
+}
+
+.received {
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#F1F1F1;
+    margin-bottom: 13px;
+    color:#000;
+}
+
+.header {
+    display: inline-block;
+}

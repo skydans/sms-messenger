@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partials/head %>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Confirm Delete</h1>
+        </div>
+        <div class="col">
+            <a href="/messages" class="float-right btn btn-primary">Back</a>
+        </div>
+    </div>
+    <hr>
+    <p>Are you sure you would like to delete this conversation with <%= convo.number %>?</p>
+    <!-- <button type="delete_convo" class="btn btn-danger">Delete</button> -->
+    <form action="/messages/deleteAction/<%= convo.number %>" method="POST">
+        <!-- <label name="id"></label> -->
+        <input type="text" name="id" value="<%= convo.id %>" hidden>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+</body>
+</html>

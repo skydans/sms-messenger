@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head-contents %>
+  <script>
+    jQuery(document).ready(function($) {
+      $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+      });
+    });
+
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  <style>
+    a {
+      color: inherit;
+    }
+    a:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>All Conversations</h1>
+    </div>
+    <div class="col">
+      <a href="/messages/new"><button type="new_message" class="float-right btn btn-primary">New Message</button></a>
+    </div>
+  </div>
+  <%if (typeof error != 'undefined') { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        <%= error %>
+    </div>
+    <% } %>
+  <table class="table">
+    <tbody>
+    <% allConvos.forEach(function(c) {%>
+    <tr class='clickable-row' data-href='/messages/<%= c.id %>'>
+      <td width="200px"><h4><%= c.number %></h4></td>
+      <td><a href='/messages/<%= c.id %>' data-toggle="tooltip" title="<%= c.history[c.history.length - 1].date.toTimeString() %>">
+          <i><%= c.history[c.history.length - 1].body %></i>
+        </a></td>
+      <td><a href="/messages/delete/<%= c.id %>"><button type="delete_convo" class="btn btn-danger float-right">Delete</button></a></td>
+    </tr>
+    <% }); %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
